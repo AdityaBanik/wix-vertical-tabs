@@ -27,4 +27,10 @@
     color: orangered;
   }
 
+  @media(max-width: 950px){
+    button{
+      font-size: 0.8rem;
+    }
+  }
+
 </style>

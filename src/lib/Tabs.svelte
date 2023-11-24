@@ -13,7 +13,7 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        gap: 20px;
+        gap: 60px;
     }
     .tabs {
         display: flex;

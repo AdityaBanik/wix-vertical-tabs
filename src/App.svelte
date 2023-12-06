@@ -1,3 +1,5 @@
+<svelte:options customElement="wix-vertical-tabs" />
+
 <script>
   import Accordian from "./lib/Accordian.svelte";
   import AccordianItem from "./lib/AccordianItem.svelte";
@@ -6,6 +8,7 @@
   import { fade } from "svelte/transition";
   let activeTab = 1;
 </script>
+
 
 <div class="container">
   <section class="tabs">
@@ -328,23 +331,23 @@
 </div>
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-  :global(body) {
-    font-family: "Inter", sans-serif;
+  .container {
+    font-family: 'Montserrat', sans-serif;
     background-color: transparent;
     margin: 0;
     display: flex;
-    justify-content: center;
+  
     align-items: center;
-    min-height: 100vh;
+    
   }
-  :global(*) {
+  .container * {
     box-sizing: border-box;
   }
 
   .container{
-   
+    font-size: 16px;
     padding: 2em;
   }
   .accordian {
@@ -353,14 +356,16 @@
 
   .panel {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    height: 600px;
+    height: 510px;
     max-width: 750px;
   }
-
+  .tabs{
+    width: 100%;
+  }
   p {
     text-align: center;
     color: #33333387;
@@ -371,19 +376,24 @@
 
     object-fit: contain;
   }
+@media (min-width: 1600px) {
+  .container{    
+    font-size: 18px;
+  }
+}
 
   @media (max-width: 950px) {
     .panel {
       height: 400px;
     }
 
-    :global(body) {
+    .container {
       font-size: 14px; /* Decrease the font size for mobile */
     }
   }
 
   @media (max-width: 600px) {
-    :global(body) {
+   .container{
       font-size: 12px; /* Decrease the font size for mobile */
     }
     img {

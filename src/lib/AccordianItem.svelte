@@ -18,9 +18,9 @@
 
 <button on:click={toggle} class:selected={$openItem === id}>
   {#if $openItem === id}
-    <span style="margin-right: 1em;">👇</span>
+    <span style="margin-right: 1em;">➖</span>
   {:else}
-    <span style="margin-right: 1em;">👉</span>
+    <span style="margin-right: 1em;">➕</span>
   {/if}
 
   <slot name="title" />

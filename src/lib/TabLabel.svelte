@@ -17,7 +17,7 @@
     border: none;
     padding: 1em 32px;
     cursor: pointer;
-    border-left: 2px solid #cccccc1c;
+    border-left: 2px solid #cccccc6e;
     letter-spacing: 0.2px;
     white-space: nowrap;
     width: 100%;

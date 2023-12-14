@@ -9,12 +9,11 @@
   let activeTab = 1;
 </script>
 
-
 <div class="container">
   <section class="tabs">
     <Tabs>
       <TabLabel bind:group={activeTab} value={1}
-        >Equipment Availability</TabLabel
+        >Resources Availability Status ​</TabLabel
       >
 
       <TabLabel bind:group={activeTab} value={2}>
@@ -50,16 +49,19 @@
         Barcode Printing for Identification
       </TabLabel>
 
+      <TabLabel bind:group={activeTab} value={11}>Other Features</TabLabel>
+
       <svelte:fragment slot="panel">
         {#if activeTab === 1}
           <article class="panel" in:fade>
             <p>
-              You can effortlessly check the real-time availability status of
-              equipment, ensuring smooth and efficient equipment management.
+              Explore the calendar view to track the schedule of resources,
+              encompassing their current status, upcoming assignments and their
+              availability.​
             </p>
             <img
-              src="https://static.wixstatic.com/media/454d4b_c5bda5960cdd41d1a8d0303e80b5ce70~mv2.png"
-              alt="Equipment Availability"
+              src="https://static.wixstatic.com/media/454d4b_818cb260ad9244f3b17c54b4b07d8fc1~mv2.png"
+              alt="Resources Availability Status in Real-time"
             />
           </article>
         {:else if activeTab === 2}
@@ -70,7 +72,7 @@
               ensuring nothing gets misplaced.
             </p>
             <img
-              src="https://static.wixstatic.com/media/454d4b_31d8a719e4854a4786d19a0a64379234~mv2.png"
+              src="https://static.wixstatic.com/media/b8fe2a_e8f5e4ac47494febbd0f396c2b906a83~mv2.png"
               alt="Equipment Tracking"
             />
           </article>
@@ -94,7 +96,7 @@
               reducing downtime.
             </p>
             <img
-              src="https://static.wixstatic.com/media/454d4b_d8076718904843b88c5a41ab9f78b39d~mv2.png"
+              src="https://static.wixstatic.com/media/b8fe2a_0fb5f4c16d6b4677ae3030308aa880d3~mv2.png"
               alt="Work Order Scheduling"
             />
           </article>
@@ -166,6 +168,14 @@
             <img
               src="https://static.wixstatic.com/media/454d4b_4e5677fce5484cbcb5870884e351e219~mv2.png"
               alt="Barcode Printing for Identification"
+            />
+          </article>
+        {:else if activeTab === 11}
+          <article class="panel" in:fade>
+            <p>Other features include</p>
+            <img
+              src="https://static.wixstatic.com/media/b8fe2a_c9114b3c038142c78d0a2f2ebf01a4ea~mv2.png"
+              alt="Other Features"
             />
           </article>
         {/if}
@@ -326,27 +336,34 @@
           />
         </article>
       </AccordianItem>
+      <AccordianItem>
+        <svelte:fragment slot="title">Other Features</svelte:fragment>
+        <article>
+          <p>Other features include</p>
+          <img
+            src="https://static.wixstatic.com/media/b8fe2a_c9114b3c038142c78d0a2f2ebf01a4ea~mv2.png"
+            alt="Other Features"
+          />
+        </article>
+      </AccordianItem>
     </Accordian>
   </section>
 </div>
 
 <style>
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
   .container {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: transparent;
     margin: 0;
     display: flex;
-  
+
     align-items: center;
-    
   }
   .container * {
     box-sizing: border-box;
   }
 
-  .container{
+  .container {
     font-size: 16px;
     padding: 2em;
   }
@@ -363,24 +380,25 @@
     height: 510px;
     max-width: 750px;
   }
-  .tabs{
+  .tabs {
     width: 100%;
   }
   p {
     text-align: center;
-    color: #33333387;
+    color: #333333;
   }
   img {
     width: 100%;
-    height: 100%;
+
+    height: 80%;
 
     object-fit: contain;
   }
-@media (min-width: 1600px) {
-  .container{    
-    font-size: 18px;
+  @media (min-width: 1600px) {
+    .container {
+      font-size: 18px;
+    }
   }
-}
 
   @media (max-width: 950px) {
     .panel {
@@ -393,7 +411,7 @@
   }
 
   @media (max-width: 600px) {
-   .container{
+    .container {
       font-size: 12px; /* Decrease the font size for mobile */
     }
     img {

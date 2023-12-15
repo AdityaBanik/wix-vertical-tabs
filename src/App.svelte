@@ -1,427 +1,258 @@
-<svelte:options customElement="wix-vertical-tabs" />
+<svelte:options customElement="wix-vertical-tabs-scheduling" />
 
 <script>
   import Accordian from "./lib/Accordian.svelte";
   import AccordianItem from "./lib/AccordianItem.svelte";
-  import TabLabel from "./lib/TabLabel.svelte";
-  import Tabs from "./lib/Tabs.svelte";
+
   import { fade } from "svelte/transition";
-  let activeTab = 1;
 </script>
 
-<div class="container">
-  <section class="tabs">
-    <Tabs>
-      <TabLabel bind:group={activeTab} value={1}
-        >Resources Availability Status ​</TabLabel
-      >
-
-      <TabLabel bind:group={activeTab} value={2}>
-        Effortless Equipment Tracking
-      </TabLabel>
-
-      <TabLabel bind:group={activeTab} value={3}>
-        Equipment Reservation Calendar
-      </TabLabel>
-
-      <TabLabel bind:group={activeTab} value={4}>Work Order Scheduling</TabLabel
-      >
-
-      <TabLabel bind:group={activeTab} value={5}>
-        Preventive Maintenance Logs
-      </TabLabel>
-
-      <TabLabel bind:group={activeTab} value={6}>Utilization Record</TabLabel>
-
-      <TabLabel bind:group={activeTab} value={7}>
-        Equipment Details Management
-      </TabLabel>
-
-      <TabLabel bind:group={activeTab} value={8}>
-        Clone and Archive Equipment
-      </TabLabel>
-
-      <TabLabel bind:group={activeTab} value={9}>
-        Overdue Checked-Out Equipment
-      </TabLabel>
-
-      <TabLabel bind:group={activeTab} value={10}>
-        Barcode Printing for Identification
-      </TabLabel>
-
-      <TabLabel bind:group={activeTab} value={11}>Other Features</TabLabel>
-
-      <svelte:fragment slot="panel">
-        {#if activeTab === 1}
-          <article class="panel" in:fade>
-            <p>
-              Explore the calendar view to track the schedule of resources,
-              encompassing their current status, upcoming assignments and their
-              availability.​
-            </p>
-            <img
-              src="https://static.wixstatic.com/media/454d4b_818cb260ad9244f3b17c54b4b07d8fc1~mv2.png"
-              alt="Resources Availability Status in Real-time"
-            />
-          </article>
-        {:else if activeTab === 2}
-          <article class="panel" in:fade>
-            <p>
-              When checking out/checking in an equipment, record the equipment's
-              location through a simple check-in and checkout procedure,
-              ensuring nothing gets misplaced.
-            </p>
-            <img
-              src="https://static.wixstatic.com/media/b8fe2a_e8f5e4ac47494febbd0f396c2b906a83~mv2.png"
-              alt="Equipment Tracking"
-            />
-          </article>
-        {:else if activeTab === 3}
-          <article class="panel" in:fade>
-            <p>
-              Schedule and reserve equipment in a shared calendar for organized
-              allocation and planning. You can schedule it for test
-              requests/events.
-            </p>
-            <img
-              src="https://static.wixstatic.com/media/454d4b_66eda8b1a25e46d9bee1622d73a6f0bd~mv2.png"
-              alt="Equipment Reservation Calendar"
-            />
-          </article>
-        {:else if activeTab === 4}
-          <article class="panel" in:fade>
-            <p>
-              Plan ad hoc maintenance or calibration schedules in advance and
-              receive timely notifications, preventing unexpected breakdowns and
-              reducing downtime.
-            </p>
-            <img
-              src="https://static.wixstatic.com/media/b8fe2a_0fb5f4c16d6b4677ae3030308aa880d3~mv2.png"
-              alt="Work Order Scheduling"
-            />
-          </article>
-        {:else if activeTab === 5}
-          <article class="panel" in:fade>
-            <p>
-              Reminder for the upcoming calibration events and keeping all
-              records of calibration/maintenance activities.
-            </p>
-            <img
-              src="https://static.wixstatic.com/media/454d4b_e389328ab4654687847ef5ba64e4e3b1~mv2.png"
-              alt="Preventive Maintenance Logs"
-            />
-          </article>
-        {:else if activeTab === 6}
-          <article class="panel" in:fade>
-            <p>
-              Easily assists Overall Equipment Effectiveness (OEE) and track
-              usage records, empowering you to optimize and forecast your asset
-              performance.
-            </p>
-            <img
-              src="https://static.wixstatic.com/media/454d4b_7e85dafae2004557b0a4ba159035b9a6~mv2.png"
-              alt="Utilization Record"
-            />
-          </article>
-        {:else if activeTab === 7}
-          <article class="panel" in:fade>
-            <p>
-              Centralize and update equipment data, including name, type, specs,
-              purchase details, manufacturer, supplier, and warranty information
-              for efficient management.
-            </p>
-            <img
-              src="https://static.wixstatic.com/media/454d4b_6890023ebab84434bbb287d426bb8c6e~mv2.png"
-              alt="Equipment Details Management"
-            />
-          </article>
-        {:else if activeTab === 8}
-          <article class="panel" in:fade>
-            <p>
-              Effortlessly duplicate equipment profiles, simplify additions, and
-              streamline retirement with preserved records and archives for
-              efficient lifecycle management.
-            </p>
-            <img
-              src="https://static.wixstatic.com/media/454d4b_784158ea37b84b37b16b81fe5dcc710a~mv2.png"
-              alt="Clone and Archive Equipment"
-            />
-          </article>
-        {:else if activeTab === 9}
-          <article class="panel" in:fade>
-            <p>
-              Receive alerts for overdue equipment checkouts, ensuring equipment
-              is returned on time and avoiding unnecessary delays.
-            </p>
-            <img
-              src="https://static.wixstatic.com/media/454d4b_9e1a320933fc4c498aecfe79fbaa6d17~mv2.png"
-              alt="Overdue Checked-Out Equipment"
-            />
-          </article>
-        {:else if activeTab === 10}
-          <article class="panel" in:fade>
-            <p>
-              Generate unique barcodes for each piece of equipment, simplifying
-              identification and tracking of warranty, calibration, and other
-              essential details.
-            </p>
-            <img
-              src="https://static.wixstatic.com/media/454d4b_4e5677fce5484cbcb5870884e351e219~mv2.png"
-              alt="Barcode Printing for Identification"
-            />
-          </article>
-        {:else if activeTab === 11}
-          <article class="panel" in:fade>
-            <p>Other features include</p>
-            <img
-              src="https://static.wixstatic.com/media/b8fe2a_c9114b3c038142c78d0a2f2ebf01a4ea~mv2.png"
-              alt="Other Features"
-            />
-          </article>
-        {/if}
-      </svelte:fragment>
-    </Tabs>
-  </section>
-
-  <section class="accordian">
+<section class="accordian-container">
+  <h1><span>All-in-one</span> verification hub to optimize your product testing process</h1>
+  <div class="accordian">
     <Accordian>
       <AccordianItem>
-        <svelte:fragment slot="title">Equipment Availability</svelte:fragment>
+        <svelte:fragment slot="title">Requirement Analysis</svelte:fragment>
         <article>
           <p>
-            You can effortlessly check the real-time availability status of
-            equipment, ensuring smooth and efficient equipment management.
+            Trace, record, analyze, and prioritize the requirements to
+            successfully fulfil all product testing goals.
           </p>
           <img
-            src="https://static.wixstatic.com/media/454d4b_c5bda5960cdd41d1a8d0303e80b5ce70~mv2.png"
-            alt="Equipment Availability"
+            transition:fade={{duration:800}}
+            src="https://static.wixstatic.com/media/43794f_bbc6cbbe424c4c8ebe4ac6b519cbd45d~mv2.png"
+            alt="Resources Availability Status in Real-time"
           />
         </article>
       </AccordianItem>
       <AccordianItem>
-        <svelte:fragment slot="title"
-          >Effortless Equipment Tracking</svelte:fragment
-        >
+        <svelte:fragment slot="title">Verification Planning</svelte:fragment>
         <article>
           <p>
-            When checking out/checking in an equipment, record the equipment's
-            location through a simple check-in and checkout procedure, ensuring
-            nothing gets misplaced.
+            Easily verify your product's performance per the requirements
+            defined by engineers during the design phase. You can also easily
+            track progress while the test is going on.
           </p>
           <img
-            src="https://static.wixstatic.com/media/454d4b_31d8a719e4854a4786d19a0a64379234~mv2.png"
-            alt="Equipment Tracking"
+            transition:fade={{duration:800}}
+            src="https://static.wixstatic.com/media/43794f_cca6ab06d6a8420aacec8e823436c90d~mv2.png"
+            alt="Resource Assignment"
           />
         </article>
       </AccordianItem>
       <AccordianItem>
-        <svelte:fragment slot="title"
-          >Equipment Reservation Calendar</svelte:fragment
-        >
+        <svelte:fragment slot="title">Maximum Test Coverage</svelte:fragment>
         <article>
           <p>
-            Schedule and reserve equipment in a shared calendar for organized
-            allocation and planning. You can schedule it for test
-            requests/events.
+            Test coverage improves the quality of test cases while you create
+            and reuse the same test cases several times. All you have to do is
+            change the testing parameters with different values.
           </p>
           <img
-            src="https://static.wixstatic.com/media/454d4b_66eda8b1a25e46d9bee1622d73a6f0bd~mv2.png"
-            alt="Equipment Reservation Calendar"
+            transition:fade={{duration:800}}
+            src="https://static.wixstatic.com/media/43794f_1e87966fdfbc4982b002bcb988717bab~mv2.png"
+            alt="Resource Assignment"
           />
         </article>
       </AccordianItem>
       <AccordianItem>
-        <svelte:fragment slot="title">Work Order Scheduling</svelte:fragment>
+        <svelte:fragment slot="title">Traceability Matrix</svelte:fragment>
         <article>
           <p>
-            Plan ad hoc maintenance or calibration schedules in advance and
-            receive timely notifications, preventing unexpected breakdowns and
-            reducing downtime.
+            The TITAN traceability matrix helps keep track of every level of
+            testing, enables 100% test coverage for all business and functional
+            requirements, updates all requirements status in real-time, and
+            analyzes the impact of requirement changes.
           </p>
           <img
-            src="https://static.wixstatic.com/media/454d4b_d8076718904843b88c5a41ab9f78b39d~mv2.png"
-            alt="Work Order Scheduling"
-          />
-        </article>
-      </AccordianItem>
-      <AccordianItem>
-        <svelte:fragment slot="title"
-          >Preventive Maintenance Logs</svelte:fragment
-        >
-        <article>
-          <p>
-            Reminder for the upcoming calibration events and keeping all records
-            of calibration/maintenance activities.
-          </p>
-          <img
-            src="https://static.wixstatic.com/media/454d4b_e389328ab4654687847ef5ba64e4e3b1~mv2.png"
-            alt="Preventive Maintenance Logs"
-          />
-        </article>
-      </AccordianItem>
-      <AccordianItem>
-        <svelte:fragment slot="title">Utilization Record</svelte:fragment>
-        <article>
-          <p>
-            Easily assists Overall Equipment Effectiveness (OEE) and track usage
-            records, empowering you to optimize and forecast your asset
-            performance.
-          </p>
-          <img
-            src="https://static.wixstatic.com/media/454d4b_7e85dafae2004557b0a4ba159035b9a6~mv2.png"
-            alt="Utilization Record"
-          />
-        </article>
-      </AccordianItem>
-      <AccordianItem>
-        <svelte:fragment slot="title"
-          >Equipment Details Management</svelte:fragment
-        >
-        <article>
-          <p>
-            Centralize and update equipment data, including name, type, specs,
-            purchase details, manufacturer, supplier, and warranty information
-            for efficient management.
-          </p>
-          <img
-            src="https://static.wixstatic.com/media/454d4b_6890023ebab84434bbb287d426bb8c6e~mv2.png"
-            alt="Equipment Details Management"
-          />
-        </article>
-      </AccordianItem>
-      <AccordianItem>
-        <svelte:fragment slot="title"
-          >Clone and Archive Equipment</svelte:fragment
-        >
-        <article>
-          <p>
-            Effortlessly duplicate equipment profiles, simplify additions, and
-            streamline retirement with preserved records and archives for
-            efficient lifecycle management.
-          </p>
-          <img
-            src="https://static.wixstatic.com/media/454d4b_784158ea37b84b37b16b81fe5dcc710a~mv2.png"
-            alt="Clone and Archive Equipment"
-          />
-        </article>
-      </AccordianItem>
-      <AccordianItem>
-        <svelte:fragment slot="title"
-          >Overdue Checked-Out Equipment</svelte:fragment
-        >
-        <article>
-          <p>
-            Receive alerts for overdue equipment checkouts, ensuring equipment
-            is returned on time and avoiding unnecessary delays.
-          </p>
-          <img
-            src="https://static.wixstatic.com/media/454d4b_9e1a320933fc4c498aecfe79fbaa6d17~mv2.png"
-            alt="Overdue Checked-Out Equipment"
-          />
-        </article>
-      </AccordianItem>
-      <AccordianItem>
-        <svelte:fragment slot="title"
-          >Barcode Printing for Identification</svelte:fragment
-        >
-        <article>
-          <p>
-            Generate unique barcodes for each piece of equipment, simplifying
-            identification and tracking of warranty, calibration, and other
-            essential details.
-          </p>
-          <img
-            src="https://static.wixstatic.com/media/454d4b_4e5677fce5484cbcb5870884e351e219~mv2.png"
-            alt="Barcode Printing for Identification"
-          />
-        </article>
-      </AccordianItem>
-      <AccordianItem>
-        <svelte:fragment slot="title">Other Features</svelte:fragment>
-        <article>
-          <p>Other features include</p>
-          <img
-            src="https://static.wixstatic.com/media/b8fe2a_c9114b3c038142c78d0a2f2ebf01a4ea~mv2.png"
-            alt="Other Features"
+            transition:fade={{duration:800}}
+            src="https://static.wixstatic.com/media/43794f_cca6ab06d6a8420aacec8e823436c90d~mv2.png"
+            alt="Resource Assignment"
           />
         </article>
       </AccordianItem>
     </Accordian>
-  </section>
-</div>
+  </div>
+</section>
 
+
+<section class="accordian-container right-align">
+  <h1>Orchestrate your testing
+    schedule, collaborate with
+    teams, and take advantage of <span>optimum resource allocation</span></h1>
+  <div class="accordian">
+    <Accordian>
+      <AccordianItem alignRight={true}>
+        <svelte:fragment slot="title">Prototype Management</svelte:fragment>
+        <article>
+          <p>
+            Enable your teams to interact effectively, keep track of resources in real-time and avoid double-booking while minimizing conflicts between teams over testing resources.  
+          </p>
+          <img
+            transition:fade={{duration:800}}
+            src="https://static.wixstatic.com/media/43794f_7f42670e3f95466eac63adc9f07367e1~mv2.png"
+            alt="Resources Availability Status in Real-time"
+          />
+        </article>
+      </AccordianItem>
+      <AccordianItem alignRight={true}>
+        <svelte:fragment slot="title">Integrated Work Order management</svelte:fragment>
+        <article>
+          <p>
+            Standardize and effortlessly map all your business processes to streamline operation with more accountability and zero ambiguity. No matter how stringent or complex your testing environment is, Titan offers a seamless experience, every time! 
+          </p>
+          <img
+            transition:fade={{duration:800}}
+            src="https://static.wixstatic.com/media/454d4b_52cd0f152dfc424e9bb2295e1f81ad3a~mv2.png"
+            alt="Resource Assignment"
+          />
+        </article>
+      </AccordianItem>
+      <AccordianItem alignRight={true}>
+        <svelte:fragment slot="title">Assets and Resource Management</svelte:fragment>
+        <article>
+          <p>
+            Enjoy an easy-to-use system to streamline the entire test scheduling process from receiving test requests, to filtering and assigning them to a resource, and finally executing the test. 
+          </p>
+          <img
+            transition:fade={{duration:800}}
+            src="https://static.wixstatic.com/media/43794f_9870822e316c44288988df8b201fabed~mv2.png"
+            alt="Resource Assignment"
+          />
+        </article>
+      </AccordianItem>
+    </Accordian>
+  </div>
+</section>
+
+<section class="accordian-container">
+  <h1>Embrace the <span>robust</span> features
+    that make test management
+    a cakewalk for your team</h1>
+  <div class="accordian">
+    <Accordian>
+      <AccordianItem>
+        <svelte:fragment slot="title">Team Collaboration and Conflict Management</svelte:fragment>
+        <article>
+          <p>
+            Meet the needs of your users by testing your prototype with real consumers and validating your product concept before development. An ideal tool for prototype specifications management and tracking them for every test run. 
+          </p>
+          <img
+            transition:fade={{duration:800}}
+            src="https://static.wixstatic.com/media/43794f_da4b8397358543c6b3a5a0e7e5e731e2~mv2.png"
+            alt="Resources Availability Status in Real-time"
+          />
+        </article>
+      </AccordianItem>
+      <AccordianItem>
+        <svelte:fragment slot="title">Process Standardization</svelte:fragment>
+        <article>
+          <p>
+            Track the work order process, use various work orders associated with your assets, test articles, build, and report progress to requesters, so they know the value you produce.
+          </p>
+          <img
+            transition:fade={{duration:800}}
+            src="https://static.wixstatic.com/media/43794f_52ed51684fba42be93fab4418ba9234e~mv2.png"
+            alt="Resource Assignment"
+          />
+        </article>
+      </AccordianItem>
+      <AccordianItem>
+        <svelte:fragment slot="title">Test Management</svelte:fragment>
+        <article>
+          <p>
+            Automatically manage your test lab, conduct equipment inventory, manage preventive maintenance schedule and derive insights into a lab's performance to boost productivity and update the team on test lab specifications. 
+          </p>
+          <img
+            transition:fade={{duration:800}}
+            src="https://static.wixstatic.com/media/43794f_8ecfb0a9946843ff9925fbb43f3df792~mv2.png"
+            alt="Resource Assignment"
+          />
+        </article>
+      </AccordianItem>
+    </Accordian>
+  </div>
+</section>
 <style>
-  .container {
-    font-family: "Montserrat", sans-serif;
-    background-color: transparent;
-    margin: 0;
-    display: flex;
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
 
-    align-items: center;
-  }
-  .container * {
+  * {
     box-sizing: border-box;
   }
 
-  .container {
-    font-size: 16px;
-    padding: 2em;
+  :global(body){
+    padding: 4em;
+  }
+
+  h1 {
+    max-width: 550px;
+    font-size: 32px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: #253858;
+    padding: 0 .5em;
+  }
+
+  h1 span{
+    color: #008AFC;
   }
   .accordian {
-    display: none;
+    width: 45vw;
+  
+    color: #253858;
+    font-size: 14px;
   }
 
-  .panel {
+  .accordian-container {
+    position: relative;
+    min-height: 550px;
     display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    height: 510px;
-    max-width: 750px;
+    flex-direction: column;
+    gap:25px;
+    margin-bottom: 5em;
   }
-  .tabs {
-    width: 100%;
+
+  .right-align{
+    align-items: flex-end;
+    text-align: right;
   }
+
+  .right-align img{
+    left: 0;
+  }
+
   p {
-    text-align: center;
-    color: #333333;
+    font-family: "Montserrat", sans-serif;
+    color: gray;
+    font-weight: 300;
+    margin: 0;
+    letter-spacing: 1px;
   }
   img {
-    width: 100%;
-
-    height: 80%;
-
+    width: 45vw;
+    top: 0;
+    height: 100%;
+    right: 0;
     object-fit: contain;
-  }
-  @media (min-width: 1600px) {
-    .container {
-      font-size: 18px;
-    }
+    position: absolute;
+    
   }
 
-  @media (max-width: 950px) {
-    .panel {
-      height: 400px;
-    }
-
-    .container {
-      font-size: 14px; /* Decrease the font size for mobile */
-    }
+  article {
+    background-color: rgba(220, 220, 220, 0.175);
+    padding: 0 3.8em;
+    padding-bottom: 2em;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
-
-  @media (max-width: 600px) {
-    .container {
-      font-size: 12px; /* Decrease the font size for mobile */
+  @media screen and (max-width: 768px) {
+    .accordian {
+      width: 100%;
+      text-align: center;
     }
     img {
-      height: 250px;
-    }
-    .accordian {
-      display: block;
-    }
-    .tabs {
-      display: none;
+      width: 90%;
+      position: static;
     }
   }
 </style>

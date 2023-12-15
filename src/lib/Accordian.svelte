@@ -24,7 +24,12 @@
       openItem.set(item);
     },
     openItem,
+    items,
   });
-</script>
 
+ 
+</script>
+<div>
 <slot />
+</div>
+

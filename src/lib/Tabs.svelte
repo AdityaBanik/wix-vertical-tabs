@@ -11,9 +11,9 @@
     .solutions-features{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        
         align-items: center;
-        gap: 60px;
+        gap: 200px;
     }
     .tabs {
         display: flex;

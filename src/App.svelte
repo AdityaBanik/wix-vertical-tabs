@@ -1,4 +1,4 @@
-<svelte:options customElement="wix-vertical-tabs" />
+<svelte:options customElement="tabs-issue-management" />
 
 <script>
   import Accordian from "./lib/Accordian.svelte";
@@ -13,169 +13,152 @@
   <section class="tabs">
     <Tabs>
       <TabLabel bind:group={activeTab} value={1}
-        >Resources Availability Status ​</TabLabel
+        >Create Issues from Test ​</TabLabel
       >
 
-      <TabLabel bind:group={activeTab} value={2}>
-        Effortless Equipment Tracking
-      </TabLabel>
+      <TabLabel bind:group={activeTab} value={2}>Issue dashboard</TabLabel>
 
-      <TabLabel bind:group={activeTab} value={3}>
-        Equipment Reservation Calendar
-      </TabLabel>
+      <TabLabel bind:group={activeTab} value={3}>Categorize Issues</TabLabel>
 
-      <TabLabel bind:group={activeTab} value={4}>Work Order Scheduling</TabLabel
-      >
+      <TabLabel bind:group={activeTab} value={4}>Stay informed</TabLabel>
 
       <TabLabel bind:group={activeTab} value={5}>
-        Preventive Maintenance Logs
+        Capture Root Cause and Add Countermeasures
       </TabLabel>
 
-      <TabLabel bind:group={activeTab} value={6}>Utilization Record</TabLabel>
+      <TabLabel bind:group={activeTab} value={6}>Prioritize Issues</TabLabel>
 
-      <TabLabel bind:group={activeTab} value={7}>
-        Equipment Details Management
-      </TabLabel>
+      <TabLabel bind:group={activeTab} value={7}>Link Issues</TabLabel>
 
-      <TabLabel bind:group={activeTab} value={8}>
-        Clone and Archive Equipment
-      </TabLabel>
+      <TabLabel bind:group={activeTab} value={8}>User Time Log</TabLabel>
 
-      <TabLabel bind:group={activeTab} value={9}>
-        Overdue Checked-Out Equipment
-      </TabLabel>
+      <TabLabel bind:group={activeTab} value={9}>Issue Statistics</TabLabel>
 
-      <TabLabel bind:group={activeTab} value={10}>
-        Barcode Printing for Identification
-      </TabLabel>
-
-      <TabLabel bind:group={activeTab} value={11}>Other Features</TabLabel>
+      <TabLabel bind:group={activeTab} value={10}>More Features</TabLabel>
 
       <svelte:fragment slot="panel">
         {#if activeTab === 1}
           <article class="panel" in:fade>
             <p>
-              Explore the calendar view to track the schedule of resources,
-              encompassing their current status, upcoming assignments and their
-              availability.​
+              You can create an incident from a test and skip entering all the
+              meta data twice. Navigate through issue workflows with ease. The
+              Progress Tracker empowers your teams to efficiently move through
+              stages – from identifying the problem to its resolution, ensuring
+              accountability at every step.
             </p>
             <img
-              src="https://static.wixstatic.com/media/454d4b_818cb260ad9244f3b17c54b4b07d8fc1~mv2.png"
-              alt="Resources Availability Status in Real-time"
+              src="https://static.wixstatic.com/media/454d4b_2121622bbe544ff28cd800186d9401fb~mv2.png"
+              alt="Create Issues from Test"
             />
           </article>
         {:else if activeTab === 2}
           <article class="panel" in:fade>
             <p>
-              When checking out/checking in an equipment, record the equipment's
-              location through a simple check-in and checkout procedure,
-              ensuring nothing gets misplaced.
+              You can visualize all the Test Incidents related to the team,
+              individual team members, or to the individual or team the
+              incidents are assigned to for resolution. Easy sort, filter and
+              search functions to assist.
             </p>
             <img
-              src="https://static.wixstatic.com/media/b8fe2a_e8f5e4ac47494febbd0f396c2b906a83~mv2.png"
-              alt="Equipment Tracking"
+              src="https://static.wixstatic.com/media/454d4b_f3cf27268e8746198601080f376c65f5~mv2.png"
+              alt="Issue dashboard"
             />
           </article>
         {:else if activeTab === 3}
           <article class="panel" in:fade>
             <p>
-              Schedule and reserve equipment in a shared calendar for organized
-              allocation and planning. You can schedule it for test
-              requests/events.
+              Classify issues effortlessly based on their source, ensuring a
+              targeted approach to resolution. Prototype hiccups, test lab
+              glitches, equipment malfunctions – Titan sees them all.
             </p>
             <img
-              src="https://static.wixstatic.com/media/454d4b_66eda8b1a25e46d9bee1622d73a6f0bd~mv2.png"
-              alt="Equipment Reservation Calendar"
+              src="https://static.wixstatic.com/media/454d4b_34c7006545d1409b839bfb584001cfcd~mv2.png"
+              alt="Categorize Issues"
             />
           </article>
         {:else if activeTab === 4}
           <article class="panel" in:fade>
             <p>
-              Plan ad hoc maintenance or calibration schedules in advance and
-              receive timely notifications, preventing unexpected breakdowns and
-              reducing downtime.
+              Assign issue to the appropriate individual to judge and assess
+              whether it is an incident or concern. Add watchers to incidents so
+              email notifications for important updates are automatically sent
+              to users, like being assigned a new incident or when status
+              changes for an incident.
             </p>
             <img
-              src="https://static.wixstatic.com/media/b8fe2a_0fb5f4c16d6b4677ae3030308aa880d3~mv2.png"
-              alt="Work Order Scheduling"
+              src="https://static.wixstatic.com/media/454d4b_4d66868a04d84cc796b04397a37a3089~mv2.png"
+              alt="Stay informed"
             />
           </article>
         {:else if activeTab === 5}
           <article class="panel" in:fade>
             <p>
-              Reminder for the upcoming calibration events and keeping all
-              records of calibration/maintenance activities.
+              Go beyond surface-level problems. Titan's root cause analysis
+              dives deep, allowing you to capture the essence of issues. Craft
+              effective countermeasures to fortify your processes against future
+              challenges.
             </p>
             <img
-              src="https://static.wixstatic.com/media/454d4b_e389328ab4654687847ef5ba64e4e3b1~mv2.png"
-              alt="Preventive Maintenance Logs"
+              src="https://static.wixstatic.com/media/454d4b_c82b92e53f5b4df1a5e96334ccdba136~mv2.png"
+              alt="Capture Root Cause and Add Countermeasures"
             />
           </article>
         {:else if activeTab === 6}
           <article class="panel" in:fade>
             <p>
-              Easily assists Overall Equipment Effectiveness (OEE) and track
-              usage records, empowering you to optimize and forecast your asset
-              performance.
+              Prioritize tasks seamlessly. From critical issues demanding
+              immediate attention to low-priority concerns, Titan ensures that
+              your team's efforts are strategically aligned with project goals.
             </p>
             <img
-              src="https://static.wixstatic.com/media/454d4b_7e85dafae2004557b0a4ba159035b9a6~mv2.png"
-              alt="Utilization Record"
+              src="https://static.wixstatic.com/media/454d4b_3c23c24dc3ac43b48aeb29a5bda621e7~mv2.png"
+              alt="Prioritize Issues"
             />
           </article>
         {:else if activeTab === 7}
           <article class="panel" in:fade>
             <p>
-              Centralize and update equipment data, including name, type, specs,
-              purchase details, manufacturer, supplier, and warranty information
-              for efficient management.
+              Forge connections effortlessly. Link issues to relevant test
+              requests, work orders, and equipment. This ensures no duplications
+              occur by linking multiple similar or identical incidents together
+              and keep the context in one place.
             </p>
             <img
-              src="https://static.wixstatic.com/media/454d4b_6890023ebab84434bbb287d426bb8c6e~mv2.png"
-              alt="Equipment Details Management"
+              src="https://static.wixstatic.com/media/454d4b_9e5255cd0ecc4c0d9c0a87da24607c32~mv2.png"
+              alt="Link Issues"
             />
           </article>
         {:else if activeTab === 8}
           <article class="panel" in:fade>
             <p>
-              Effortlessly duplicate equipment profiles, simplify additions, and
-              streamline retirement with preserved records and archives for
-              efficient lifecycle management.
+              Capture time investments with precision. The User Time Log in
+              Titan provides a visual and quantitative understanding of the
+              resources invested in issue resolution, fostering efficiency.
             </p>
             <img
-              src="https://static.wixstatic.com/media/454d4b_784158ea37b84b37b16b81fe5dcc710a~mv2.png"
-              alt="Clone and Archive Equipment"
+              src="https://static.wixstatic.com/media/454d4b_94080f50a15544fbb42f762e13084019~mv2.png"
+              alt="User Time Log"
             />
           </article>
         {:else if activeTab === 9}
           <article class="panel" in:fade>
             <p>
-              Receive alerts for overdue equipment checkouts, ensuring equipment
-              is returned on time and avoiding unnecessary delays.
+              Analyze trends and performance. Titan's Issue Statistics feature
+              provides insightful data on issue creation, closure, and open
+              issues, empowering your teams with data-driven insights for
+              strategic decision-making.
             </p>
             <img
-              src="https://static.wixstatic.com/media/454d4b_9e1a320933fc4c498aecfe79fbaa6d17~mv2.png"
-              alt="Overdue Checked-Out Equipment"
+              src="https://static.wixstatic.com/media/454d4b_8417fed590f04b0f9eb098c5fadd83c1~mv2.png"
+              alt="Issue Statistics"
             />
           </article>
         {:else if activeTab === 10}
           <article class="panel" in:fade>
-            <p>
-              Generate unique barcodes for each piece of equipment, simplifying
-              identification and tracking of warranty, calibration, and other
-              essential details.
-            </p>
+            <p>More features include</p>
             <img
-              src="https://static.wixstatic.com/media/454d4b_4e5677fce5484cbcb5870884e351e219~mv2.png"
-              alt="Barcode Printing for Identification"
-            />
-          </article>
-        {:else if activeTab === 11}
-          <article class="panel" in:fade>
-            <p>Other features include</p>
-            <img
-              src="https://static.wixstatic.com/media/b8fe2a_c9114b3c038142c78d0a2f2ebf01a4ea~mv2.png"
-              alt="Other Features"
+              src="https://static.wixstatic.com/media/b8fe2a_18096b6ad804432ba47aeb5ef21b94c7~mv2.png"
+              alt="More Features"
             />
           </article>
         {/if}
@@ -186,165 +169,127 @@
   <section class="accordian">
     <Accordian>
       <AccordianItem>
-        <svelte:fragment slot="title">Equipment Availability</svelte:fragment>
-        <article>
-          <p>
-            You can effortlessly check the real-time availability status of
-            equipment, ensuring smooth and efficient equipment management.
-          </p>
-          <img
-            src="https://static.wixstatic.com/media/454d4b_c5bda5960cdd41d1a8d0303e80b5ce70~mv2.png"
-            alt="Equipment Availability"
-          />
-        </article>
+        <svelte:fragment slot="title">Create Issues from Test</svelte:fragment>
+        <p>
+          You can create an incident from a test and skip entering all the meta
+          data twice. Navigate through issue workflows with ease. The Progress
+          Tracker empowers your teams to efficiently move through stages – from
+          identifying the problem to its resolution, ensuring accountability at
+          every step.
+        </p>
+        <img
+          src="https://static.wixstatic.com/media/454d4b_2121622bbe544ff28cd800186d9401fb~mv2.png"
+          alt="Create Issues from Test"
+        />
       </AccordianItem>
       <AccordianItem>
-        <svelte:fragment slot="title"
-          >Effortless Equipment Tracking</svelte:fragment
-        >
-        <article>
-          <p>
-            When checking out/checking in an equipment, record the equipment's
-            location through a simple check-in and checkout procedure, ensuring
-            nothing gets misplaced.
-          </p>
-          <img
-            src="https://static.wixstatic.com/media/454d4b_31d8a719e4854a4786d19a0a64379234~mv2.png"
-            alt="Equipment Tracking"
-          />
-        </article>
+        <svelte:fragment slot="title">Issue dashboard</svelte:fragment>
+        <p>
+          You can visualize all the Test Incidents related to the team,
+          individual team members, or to the individual or team the incidents
+          are assigned to for resolution. Easy sort, filter and search functions
+          to assist.
+        </p>
+        <img
+          src="https://static.wixstatic.com/media/454d4b_f3cf27268e8746198601080f376c65f5~mv2.png"
+          alt="Issue dashboard"
+        />
       </AccordianItem>
       <AccordianItem>
-        <svelte:fragment slot="title"
-          >Equipment Reservation Calendar</svelte:fragment
-        >
-        <article>
-          <p>
-            Schedule and reserve equipment in a shared calendar for organized
-            allocation and planning. You can schedule it for test
-            requests/events.
-          </p>
-          <img
-            src="https://static.wixstatic.com/media/454d4b_66eda8b1a25e46d9bee1622d73a6f0bd~mv2.png"
-            alt="Equipment Reservation Calendar"
-          />
-        </article>
+        <svelte:fragment slot="title">Categorize Issues</svelte:fragment>
+        <p>
+          Classify issues effortlessly based on their source, ensuring a
+          targeted approach to resolution. Prototype hiccups, test lab glitches,
+          equipment malfunctions – Titan sees them all.
+        </p>
+        <img
+          src="https://static.wixstatic.com/media/454d4b_34c7006545d1409b839bfb584001cfcd~mv2.png"
+          alt="Categorize Issues"
+        />
       </AccordianItem>
       <AccordianItem>
-        <svelte:fragment slot="title">Work Order Scheduling</svelte:fragment>
-        <article>
-          <p>
-            Plan ad hoc maintenance or calibration schedules in advance and
-            receive timely notifications, preventing unexpected breakdowns and
-            reducing downtime.
-          </p>
-          <img
-            src="https://static.wixstatic.com/media/454d4b_d8076718904843b88c5a41ab9f78b39d~mv2.png"
-            alt="Work Order Scheduling"
-          />
-        </article>
+        <svelte:fragment slot="title">Stay informed</svelte:fragment>
+        <p>
+          Assign issue to the appropriate individual to judge and assess whether
+          it is an incident or concern. Add watchers to incidents so email
+          notifications for important updates are automatically sent to users,
+          like being assigned a new incident or when status changes for an
+          incident.
+        </p>
+        <img
+          src="https://static.wixstatic.com/media/454d4b_4d66868a04d84cc796b04397a37a3089~mv2.png"
+          alt="Stay informed"
+        />
       </AccordianItem>
       <AccordianItem>
-        <svelte:fragment slot="title"
-          >Preventive Maintenance Logs</svelte:fragment
-        >
-        <article>
-          <p>
-            Reminder for the upcoming calibration events and keeping all records
-            of calibration/maintenance activities.
-          </p>
-          <img
-            src="https://static.wixstatic.com/media/454d4b_e389328ab4654687847ef5ba64e4e3b1~mv2.png"
-            alt="Preventive Maintenance Logs"
-          />
-        </article>
+        <svelte:fragment slot="title">Capture Root Cause and Add Countermeasures</svelte:fragment>
+        <p>
+          Go beyond surface-level problems. Titan's root cause analysis dives
+          deep, allowing you to capture the essence of issues. Craft effective
+          countermeasures to fortify your processes against future challenges.
+        </p>
+        <img
+          src="https://static.wixstatic.com/media/454d4b_c82b92e53f5b4df1a5e96334ccdba136~mv2.png"
+          alt="Capture Root Cause and Add Countermeasures"
+        />
       </AccordianItem>
       <AccordianItem>
-        <svelte:fragment slot="title">Utilization Record</svelte:fragment>
-        <article>
-          <p>
-            Easily assists Overall Equipment Effectiveness (OEE) and track usage
-            records, empowering you to optimize and forecast your asset
-            performance.
-          </p>
-          <img
-            src="https://static.wixstatic.com/media/454d4b_7e85dafae2004557b0a4ba159035b9a6~mv2.png"
-            alt="Utilization Record"
-          />
-        </article>
+        <svelte:fragment slot="title">Prioritize Issues</svelte:fragment>
+        <p>
+          Prioritize tasks seamlessly. From critical issues demanding immediate
+          attention to low-priority concerns, Titan ensures that your team's
+          efforts are strategically aligned with project goals.
+        </p>
+        <img
+          src="https://static.wixstatic.com/media/454d4b_3c23c24dc3ac43b48aeb29a5bda621e7~mv2.png"
+          alt="Prioritize Issues"
+        />
       </AccordianItem>
       <AccordianItem>
-        <svelte:fragment slot="title"
-          >Equipment Details Management</svelte:fragment
-        >
-        <article>
-          <p>
-            Centralize and update equipment data, including name, type, specs,
-            purchase details, manufacturer, supplier, and warranty information
-            for efficient management.
-          </p>
-          <img
-            src="https://static.wixstatic.com/media/454d4b_6890023ebab84434bbb287d426bb8c6e~mv2.png"
-            alt="Equipment Details Management"
-          />
-        </article>
+        <svelte:fragment slot="title">Link Issues</svelte:fragment>
+        <p>
+          Forge connections effortlessly. Link issues to relevant test requests,
+          work orders, and equipment. This ensures no duplications occur by
+          linking multiple similar or identical incidents together and keep the
+          context in one place.
+        </p>
+        <img
+          src="https://static.wixstatic.com/media/454d4b_9e5255cd0ecc4c0d9c0a87da24607c32~mv2.png"
+          alt="Link Issues"
+        />
       </AccordianItem>
       <AccordianItem>
-        <svelte:fragment slot="title"
-          >Clone and Archive Equipment</svelte:fragment
-        >
-        <article>
-          <p>
-            Effortlessly duplicate equipment profiles, simplify additions, and
-            streamline retirement with preserved records and archives for
-            efficient lifecycle management.
-          </p>
-          <img
-            src="https://static.wixstatic.com/media/454d4b_784158ea37b84b37b16b81fe5dcc710a~mv2.png"
-            alt="Clone and Archive Equipment"
-          />
-        </article>
+        <svelte:fragment slot="title">User Time Log</svelte:fragment>
+        <p>
+          Capture time investments with precision. The User Time Log in Titan
+          provides a visual and quantitative understanding of the resources
+          invested in issue resolution, fostering efficiency.
+        </p>
+        <img
+          src="https://static.wixstatic.com/media/454d4b_94080f50a15544fbb42f762e13084019~mv2.png"
+          alt="User Time Log"
+        />
       </AccordianItem>
       <AccordianItem>
-        <svelte:fragment slot="title"
-          >Overdue Checked-Out Equipment</svelte:fragment
-        >
-        <article>
-          <p>
-            Receive alerts for overdue equipment checkouts, ensuring equipment
-            is returned on time and avoiding unnecessary delays.
-          </p>
-          <img
-            src="https://static.wixstatic.com/media/454d4b_9e1a320933fc4c498aecfe79fbaa6d17~mv2.png"
-            alt="Overdue Checked-Out Equipment"
-          />
-        </article>
+        <svelte:fragment slot="title">Issue Statistics</svelte:fragment>
+        <p>
+          Analyze trends and performance. Titan's Issue Statistics feature
+          provides insightful data on issue creation, closure, and open issues,
+          empowering your teams with data-driven insights for strategic
+          decision-making.
+        </p>
+        <img
+          src="https://static.wixstatic.com/media/454d4b_8417fed590f04b0f9eb098c5fadd83c1~mv2.png"
+          alt="Issue Statistics"
+        />
       </AccordianItem>
       <AccordianItem>
-        <svelte:fragment slot="title"
-          >Barcode Printing for Identification</svelte:fragment
-        >
-        <article>
-          <p>
-            Generate unique barcodes for each piece of equipment, simplifying
-            identification and tracking of warranty, calibration, and other
-            essential details.
-          </p>
-          <img
-            src="https://static.wixstatic.com/media/454d4b_4e5677fce5484cbcb5870884e351e219~mv2.png"
-            alt="Barcode Printing for Identification"
-          />
-        </article>
-      </AccordianItem>
-      <AccordianItem>
-        <svelte:fragment slot="title">Other Features</svelte:fragment>
-        <article>
-          <p>Other features include</p>
-          <img
-            src="https://static.wixstatic.com/media/b8fe2a_c9114b3c038142c78d0a2f2ebf01a4ea~mv2.png"
-            alt="Other Features"
-          />
-        </article>
+        <svelte:fragment slot="title">More Features</svelte:fragment>
+        <p>More features include</p>
+        <img
+          src="https://static.wixstatic.com/media/b8fe2a_18096b6ad804432ba47aeb5ef21b94c7~mv2.png"
+          alt="More Features"
+        />
       </AccordianItem>
     </Accordian>
   </section>

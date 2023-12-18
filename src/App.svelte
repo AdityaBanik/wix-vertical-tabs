@@ -180,9 +180,7 @@
     box-sizing: border-box;
   }
 
-  :global(body){
-    padding: 4em;
-  }
+
 
   h1 {
     max-width: 550px;

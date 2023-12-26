@@ -95,4 +95,11 @@
       font-size: 14px;
     }
   }
+
+  @media screen and (min-width: 1950px) {
+    button{
+      font-size: 24px;
+    }
+  }
+  
 </style>

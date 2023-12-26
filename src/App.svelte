@@ -1,32 +1,10 @@
-<svelte:options customElement="wix-vertical-tabs-scheduling" />
+<svelte:options customElement="home-accordians" />
 
 <script>
-  import { onDestroy, onMount, tick } from "svelte";
   import Accordian from "./lib/Accordian.svelte";
   import AccordianItem from "./lib/AccordianItem.svelte";
 
   import { fade } from "svelte/transition";
-
-  let imageHeight = 0;
-  function updateHeight() {
-    const imgElement = document.querySelector(".image-container img");
-    if (imgElement) {
-      imageHeight = imgElement.clientHeight;
-      document.documentElement.style.setProperty(
-        "--image-height",
-        `${imageHeight}px`
-      );
-    }
-  }
-  onMount(() => {
-    window.addEventListener("resize", updateHeight);
-  });
-
-  onDestroy(() => {
-    window.removeEventListener("resize", updateHeight);
-  });
-
-  $: console.log(imageHeight);
 </script>
 
 <section class="accordian-container">
@@ -44,7 +22,6 @@
           </p>
           <div class="image-container" transition:fade={{ duration: 800 }}>
             <img
-              on:load={updateHeight}
               src="https://static.wixstatic.com/media/43794f_bbc6cbbe424c4c8ebe4ac6b519cbd45d~mv2.png"
               alt="Resources Availability Status in Real-time"
             />
@@ -55,7 +32,7 @@
         <svelte:fragment slot="title">Verification Planning</svelte:fragment>
         <article>
           <p>
-            Easily verify your product's performance per the requirements
+            Easily verify your product's performance as per the requirements
             defined by engineers during the design phase. You can also easily
             track progress while the test is going on.
           </p>
@@ -238,10 +215,6 @@
     box-sizing: border-box;
   }
 
-  :global(body) {
-    margin: 0;
-    padding: 2em;
-  }
   h1 {
     max-width: 550px;
     font-size: 32px;
@@ -285,7 +258,7 @@
 
   p {
     font-family: "Montserrat", sans-serif;
-    color: gray;
+    color: black;
     font-weight: 300;
     margin: 0;
     letter-spacing: 1px;
@@ -293,20 +266,28 @@
 
   .image-container {
     width: 45vw;
+
     top: 0;
-    height: 100%;
+    height: min-content;
+
     right: 0;
     position: absolute;
     margin: 2em;
   }
 
+  @media screen and (min-width: 1650px) {
+    .image-container {
+      width: 750px;
+    }
+  }
   img {
     object-fit: contain;
     margin-top: 4em;
     width: inherit;
     position: relative;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
+    border-radius: 12px;
+    z-index: 222222;
   }
   .image-container::before {
     content: "";
@@ -333,14 +314,15 @@
     content: "";
     position: absolute;
     left: 0;
-    top: var(--image-height);
+
+    bottom: 0;
     width: 13%;
     aspect-ratio: 1/1;
 
     background-color: #008afc;
     border-radius: 20px;
     opacity: 0.2;
-    z-index: -1;
+
     animation: breathe2 4s ease-in infinite;
   }
 
@@ -358,13 +340,13 @@
 
   @keyframes breathe2 {
     0% {
-      transform: translate(-20px, -10px);
-    }
-    50% {
       transform: translate(-20px, 10px);
     }
+    50% {
+      transform: translate(-20px, 20px);
+    }
     100% {
-      transform: translate(-20px, -10px);
+      transform: translate(-20px, 10px);
     }
   }
 
@@ -382,13 +364,13 @@
     }
 
     .accordian-container {
-    position: relative;
-    min-height: 550px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-bottom: 2em;
-  }
+      position: relative;
+      min-height: 550px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      margin-bottom: 2em;
+    }
 
     .image-container {
       width: 60vw;
@@ -405,12 +387,10 @@
       padding-top: 0;
     }
 
-   img{
-    border-radius: 10px;
-   }
+    img {
+      border-radius: 10px;
+    }
     .image-container::after {
-      top: auto;
-      bottom: 0;
       border-radius: 10px;
     }
 
@@ -419,28 +399,33 @@
     }
 
     .right-align {
-   
-    text-align: left;
-  }
-
-    @keyframes breathe2 {
-      0% {
-        transform: translate(-20px, 10px);
-      }
-      50% {
-        transform: translate(-20px, 20px);
-      }
-      100% {
-        transform: translate(-20px, 10px);
-      }
+      text-align: left;
     }
   }
-
 
   @media screen and (max-width: 500px) {
     .accordian {
       width: 100%;
       font-size: 12px;
+    }
+
+    img {
+      border-radius: 5px;
+    }
+  }
+
+  @media screen and (min-width: 1950px) {
+    .accordian {
+      font-size: 20px;
+    }
+
+    .accordian-container {
+      max-width: 1920px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 36px;
     }
   }
 </style>

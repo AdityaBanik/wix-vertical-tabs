@@ -106,7 +106,7 @@
       </AccordianItem>
       <AccordianItem alignRight={true}>
         <svelte:fragment slot="title"
-          >Integrated Work Order management</svelte:fragment
+          >Integrated Work Order Management</svelte:fragment
         >
         <article>
           <p>
@@ -357,6 +357,11 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
+
+  .right-align article {
+    padding-right: 1.4em;
+  }
+
   @media screen and (max-width: 1100px) {
     .accordian {
       width: 100%;

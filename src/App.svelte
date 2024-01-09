@@ -1,4 +1,4 @@
-<svelte:options customElement="tabs-test-facilty-management" />
+<svelte:options customElement="jump-section" />
 
 <script>
   import { onDestroy, onMount } from "svelte";

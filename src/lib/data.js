@@ -57,6 +57,64 @@ const testScheduleManagementData = [
     },
 ];
 
+const testFacilityManagementData = [
+    {
+        title: 'Schedule of Test Labs',
+        description: 'Access a consolidated view of all scheduled events on the test facilities. Effortlessly observe the details of each reservation and reserve labs for events, including test requests.',
+        image: 'https://static.wixstatic.com/media/454d4b_047eed2219aa48d3ac9d4fba777bef35~mv2.png',
+    },
+    {
+        title: 'Add or Modify Test Lab',
+        description: 'Create test labs and adjust your lab settings to accommodate evolving requirements. Manage supplier information, including their contact details, for seamless coordination.',
+        image: 'https://static.wixstatic.com/media/454d4b_2fe7c38b412e4f908227f50809a3e8da~mv2.png',
+    },
+    {
+        title: 'Schedule Maintenance & Calibration',
+        description: 'Sync schedules seamlessly, from recurring calibrations for precision to timely maintenance alerts, ensuring your lab operates at peak reliability and performance.',
+        image: 'https://static.wixstatic.com/media/454d4b_2873971af3ff436199584bee57918492~mv2.png',
+    },
+    {
+        title: 'Configure Lab Timings',
+        description: 'Define operational hours for your lab, streamlining test execution according to your preferred timings and maximize resource efficiency by aligning facility hours with your needs.',
+        image: 'https://static.wixstatic.com/media/454d4b_cc6ed2f42bf149aba67a7d322abfa288~mv2.png',
+    },
+    {
+        title: 'Define Roles and Assign Users',
+        description: 'Include users for defined roles to streamline responsibilities. Efficiently delegate tasks for a well-oiled testing process.',
+        image: 'https://static.wixstatic.com/media/454d4b_a3dcbcda344c46098cf8d9ceed1c094a~mv2.png',
+    },
+    {
+        title: 'Configure Capacity & Capabilities',
+        description: 'Limit the concurrent tests in each lab to avoid conflicts and maintain peak capacity. Map tests to specific labs for streamlined planning and efficient resource usage.',
+        image: 'https://static.wixstatic.com/media/454d4b_1ccfb3a3cc9e490eae5a27871851aae4~mv2.png',
+    },
+    {
+        title: 'Maintenance and Calibration Records',
+        description: 'Access comprehensive records for maintenance and calibration tasks, keeping a complete history. Easily track records for audits and quality assurance.',
+        image: 'https://static.wixstatic.com/media/454d4b_cdb8c622c4be4bacbf3bb96ac97f09ce~mv2.png',
+    },
+    {
+        title: 'Conflict Notification',
+        description: 'Prevent overbooking with intelligent conflict detection, eliminating double-booked resources assisting in smooth operations with no unnecessary interruptions.',
+        image: 'https://static.wixstatic.com/media/454d4b_79b9e21a78e14b92af80c49607e05dc5~mv2.png',
+    },
+    {
+        title: 'Smart Permissions',
+        description: 'Tailor user permissions to ensure security and data integrity and safeguard your lab’s sensitive information with precise user and multiple team access.',
+        image: 'https://static.wixstatic.com/media/454d4b_d869aa76548c4adeb21d320aa3969875~mv2.png',
+    },
+    {
+        title: 'Watch Live',
+        description: 'Tune in live to monitor test executions, making critical decisions in real-time and ensure quality and efficiency as you virtually oversee testing labs.',
+        image: 'https://static.wixstatic.com/media/454d4b_a0d4c61e861d4438be98ce5a470215d9~mv2.png',
+    },
+    {
+        title: 'More Features',
+        description: 'More features include',
+        image: 'https://static.wixstatic.com/media/b8fe2a_c9114b3c038142c78d0a2f2ebf01a4ea~mv2.png',
+    },
+];
+
 
 const issueMangementData = [
     {
@@ -111,8 +169,65 @@ const issueMangementData = [
     },
 ];
 
+const equipmentManagementData = [
+    {
+        title: 'Equipment Availability',
+        description: 'You can effortlessly check the real-time availability status of equipment, ensuring smooth and efficient equipment management',
+        image: 'https://static.wixstatic.com/media/454d4b_c5bda5960cdd41d1a8d0303e80b5ce70~mv2.png',
+    },
+    {
+        title: 'Effortless Equipment Tracking',
+        description: 'When checking out/checking in an equipment, record the equipment\'s location through a simple check-in and checkout procedure, ensuring nothing gets misplaced.',
+        image: 'https://static.wixstatic.com/media/b8fe2a_e8f5e4ac47494febbd0f396c2b906a83~mv2.png',
+    },
+    {
+        title: 'Equipment Reservation Calendar',
+        description: 'Schedule and reserve equipment in a shared calendar for organized allocation and planning. You can schedule it for test requests/events',
+        image: 'https://static.wixstatic.com/media/454d4b_66eda8b1a25e46d9bee1622d73a6f0bd~mv2.png',
+    },
+    {
+        title: 'Work Order Scheduling',
+        description: 'Plan ad hoc maintenance or calibration schedules in advance and receive timely notifications, preventing unexpected breakdowns and reducing downtime.',
+        image: 'https://static.wixstatic.com/media/b8fe2a_0fb5f4c16d6b4677ae3030308aa880d3~mv2.png',
+    },
+    {
+        title: 'Preventive Maintenance Logs',
+        description: 'Reminder for the upcoming calibration events and keeping all records of calibration/maintenance activities.',
+        image: 'https://static.wixstatic.com/media/454d4b_e389328ab4654687847ef5ba64e4e3b1~mv2.png',
+    },
+    {
+        title: 'Utilization Record',
+        description: 'Easily assists Overall Equipment Effectiveness (OEE) and track usage records, empowering you to optimize and forecast your asset performance.',
+        image: 'https://static.wixstatic.com/media/454d4b_7e85dafae2004557b0a4ba159035b9a6~mv2.png',
+    },
+    {
+        title: 'Equipment Details Management',
+        description: 'Centralize and update equipment data, including name, type, specs, purchase details, manufacturer, supplier, and warranty information for efficient management.',
+        image: 'https://static.wixstatic.com/media/454d4b_6890023ebab84434bbb287d426bb8c6e~mv2.png',
+    },
+    {
+        title: 'Clone And Archive Equipment',
+        description: 'Effortlessly duplicate equipment profiles, simplify additions, and streamline retirement with preserved records and archives for efficient lifecycle management.',
+        image: 'https://static.wixstatic.com/media/454d4b_784158ea37b84b37b16b81fe5dcc710a~mv2.png',
+    },
+    {
+        title: 'Overdue checked-Out Equipment',
+        description: 'Receive alerts for overdue equipment checkouts, ensuring equipment is returned on time and avoiding unnecessary delays.',
+        image: 'https://static.wixstatic.com/media/454d4b_9e1a320933fc4c498aecfe79fbaa6d17~mv2.png',
+    },
+    {
+        title: 'Barcode Printing For Identification',
+        description: 'Generate unique barcodes for each piece of equipment, simplifying identification and tracking of warranty, calibration, and other essential details.',
+        image: 'https://static.wixstatic.com/media/454d4b_4e5677fce5484cbcb5870884e351e219~mv2.png',
+    },
+    {
+        title: 'Other features',
+        description: 'Other features include',
+        image: 'https://static.wixstatic.com/media/b8fe2a_c9114b3c038142c78d0a2f2ebf01a4ea~mv2.png',
+    },
+ ];
 
 
-const data = issueMangementData;
+const data = testFacilityManagementData;
 
 export default data;

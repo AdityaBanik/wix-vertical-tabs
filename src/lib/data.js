@@ -6,54 +6,54 @@ const testScheduleManagementData = [
         image: 'https://static.wixstatic.com/media/454d4b_818cb260ad9244f3b17c54b4b07d8fc1~mv2.png',
     },
     {
-        title: 'Effortless Equipment Tracking',
-        description: 'When checking out/checking in an equipment, record the equipment\'s location through a simple check-in and checkout procedure, ensuring nothing gets misplaced.',
-        image: 'https://static.wixstatic.com/media/b8fe2a_e8f5e4ac47494febbd0f396c2b906a83~mv2.png',
+        title: 'Resource Assignment',
+        description: 'TITAN offers insights into resource availability, the capability to swap resources, and visibility into busy resources. You can also add or modify resources as needed for any event.',
+        image: 'https://static.wixstatic.com/media/454d4b_5569a751ec7b4ff68f7dae8d544f72fc~mv2.png',
     },
     {
-        title: 'Equipment Reservation Calendar',
-        description: 'Schedule and reserve equipment in a shared calendar for organized allocation and planning. You can schedule it for test requests/events.',
-        image: 'https://static.wixstatic.com/media/454d4b_66eda8b1a25e46d9bee1622d73a6f0bd~mv2.png',
+        title: 'Conflict Resolution',
+        description: 'Proactively be notified of conflicts and receive alternatives to resolve them with TITAN\'s intuitive conflict resolution feature.',
+        image: 'https://static.wixstatic.com/media/454d4b_b2634fd3f9c04073980d3dee7133f12d~mv2.png',
     },
     {
-        title: 'Work Order Scheduling',
-        description: 'Plan ad hoc maintenance or calibration schedules in advance and receive timely notifications, preventing unexpected breakdowns and reducing downtime.',
-        image: 'https://static.wixstatic.com/media/b8fe2a_0fb5f4c16d6b4677ae3030308aa880d3~mv2.png',
+        title: 'Schedule & reschedule',
+        description: 'Efficiently schedule and approve events on the calendar with TITAN. Effortlessly adjust schedules as required.',
+        image: 'https://static.wixstatic.com/media/454d4b_89cd6ceb55b04069b94496d80c9db79b~mv2.png',
     },
     {
-        title: 'Preventive Maintenance Logs',
-        description: 'Reminder for the upcoming calibration events and keeping all records of calibration/maintenance activities.',
-        image: 'https://static.wixstatic.com/media/454d4b_e389328ab4654687847ef5ba64e4e3b1~mv2.png',
+        title: 'Add and Remove Days from a Test',
+        description: 'Adapt test schedules on-the-fly to accommodate unexpected changes.',
+        image: 'https://static.wixstatic.com/media/454d4b_18371fb59229455785a12d10379fab5d~mv2.png',
     },
     {
-        title: 'Utilization Record',
-        description: 'Easily assists Overall Equipment Effectiveness (OEE) and track usage records, empowering you to optimize and forecast your asset performance.',
-        image: 'https://static.wixstatic.com/media/454d4b_7e85dafae2004557b0a4ba159035b9a6~mv2.png',
+        title: 'Drag and Drop​',
+        description: 'Have complete control in adjusting schedules across resources through easy drag-and-drop functionality. TITAN will proactively notify all stakeholders of any changes to the event.',
+        image: 'https://static.wixstatic.com/media/454d4b_58b9e051160041f5aa9934d54683c4f7~mv2.png',
     },
     {
-        title: 'Equipment Details Management',
-        description: 'Centralize and update equipment data, including name, type, specs, purchase details, manufacturer, supplier, and warranty information for efficient management.',
-        image: 'https://static.wixstatic.com/media/454d4b_6890023ebab84434bbb287d426bb8c6e~mv2.png',
+        title: 'Real-Time Notifications​',
+        description: 'Get notified instantly regarding assignments with scheduled event details.',
+        image: 'https://static.wixstatic.com/media/454d4b_80ef2002e5a74624bfd9399d37f57496~mv2.png',
     },
     {
-        title: 'Clone and Archive Equipment',
-        description: 'Effortlessly duplicate equipment profiles, simplify additions, and streamline retirement with preserved records and archives for efficient lifecycle management.',
-        image: 'https://static.wixstatic.com/media/454d4b_784158ea37b84b37b16b81fe5dcc710a~mv2.png',
+        title: 'Team Workload​',
+        description: 'Observe team’s workload on calendar. Gain insights using dashboards, facilitating efficient planning.​',
+        image: 'https://static.wixstatic.com/media/454d4b_4ad7ee251b714075878c232e29978a4e~mv2.png',
     },
     {
-        title: 'Overdue Checked-Out Equipment',
-        description: 'Receive alerts for overdue equipment checkouts, ensuring equipment is returned on time and avoiding unnecessary delays.',
-        image: 'https://static.wixstatic.com/media/454d4b_9e1a320933fc4c498aecfe79fbaa6d17~mv2.png',
+        title: 'View Upcoming Work Orders​',
+        description: 'Monitor upcoming work orders, including maintenance and calibration tasks, on the calendar to ensure the optimal health of assets.​',
+        image: 'https://static.wixstatic.com/media/454d4b_ca6b8c047ed74440aa314f3826542db3~mv2.png',
     },
     {
-        title: 'Barcode Printing for Identification',
-        description: 'Generate unique barcodes for each piece of equipment, simplifying identification and tracking of warranty, calibration, and other essential details.',
-        image: 'https://static.wixstatic.com/media/454d4b_4e5677fce5484cbcb5870884e351e219~mv2.png',
+        title: 'Personalize Calendar​',
+        description: 'Tailor the calendar duration to your preference. Utilize filters to streamline information and concentrate on events and assets that are significant to you.​',
+        image: 'https://static.wixstatic.com/media/454d4b_1e15d91e2def4969a53d19da45985a97~mv2.png',
     },
     {
-        title: 'Other Features',
-        description: 'Other features include',
-        image: 'https://static.wixstatic.com/media/b8fe2a_c9114b3c038142c78d0a2f2ebf01a4ea~mv2.png',
+        title: 'Reports​',
+        description: 'Gain insights into utilization and efficiency through in-built comprehensive reports, aiding in your optimization and forecasting plans.​',
+        image: 'https://static.wixstatic.com/media/454d4b_14eae3cc185f430ebf6f3b6fc0a36385~mv2.pngs',
     },
 ];
 
@@ -228,6 +228,6 @@ const equipmentManagementData = [
  ];
 
 
-const data = testFacilityManagementData;
+const data = testScheduleManagementData;
 
 export default data;

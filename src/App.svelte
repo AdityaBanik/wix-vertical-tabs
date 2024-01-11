@@ -196,7 +196,7 @@
   .scroll-container {
     display: flex;
     gap: 120px;
-    padding: 4em 2em;
+    padding: 3em 2em;
     border-radius: 20px;
     box-shadow: 0px 0px 8px 0px #00000020;
   }

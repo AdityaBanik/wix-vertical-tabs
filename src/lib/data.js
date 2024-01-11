@@ -53,7 +53,7 @@ const testScheduleManagementData = [
     {
         title: 'Reports​',
         description: 'Gain insights into utilization and efficiency through in-built comprehensive reports, aiding in your optimization and forecasting plans.​',
-        image: 'https://static.wixstatic.com/media/454d4b_14eae3cc185f430ebf6f3b6fc0a36385~mv2.pngs',
+        image: 'https://static.wixstatic.com/media/454d4b_14eae3cc185f430ebf6f3b6fc0a36385~mv2.png',
     },
 ];
 
@@ -221,8 +221,8 @@ const equipmentManagementData = [
         image: 'https://static.wixstatic.com/media/454d4b_4e5677fce5484cbcb5870884e351e219~mv2.png',
     },
     {
-        title: 'Other features',
-        description: 'Other features include',
+        title: 'More Features',
+        description: 'More Features include',
         image: 'https://static.wixstatic.com/media/b8fe2a_c9114b3c038142c78d0a2f2ebf01a4ea~mv2.png',
     },
  ];

@@ -47,7 +47,7 @@
 <div class="container">
   <div class="scroll-container">
     <div class="features">
-      <h3>Jump to Section</h3>
+      <h3>Jump to feature</h3>
       {#each data as item, i}
         <button
           class:selected={selected === i}
@@ -63,6 +63,7 @@
           class:selected={selected === i}
           bind:this={sections[i]}
         >
+          <h3>{item.title}</h3>
           <p>{item.description}</p>
           <img src={item.image} alt={item.title} />
         </article>
@@ -105,16 +106,30 @@
   }
   .scrollable .panel {
     height: 100%;
-
+    
     padding: 2.5em 1em;
+    
     display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
-    flex-direction: column-reverse;
+  .panel h3{
+    color: #33333377;
+    margin: 0;
+    letter-spacing: .8px;
+    font-weight: 400;
+   
   }
 
   .panel p {
-    color: #333333d0;
-    margin-top: 3em;
+    color: #333333ce;
+    text-align: left;
+    margin-top: .75em;
+    margin-bottom: 2.5em;
+    
+    max-width: 700px;
+    text-align: center;
   }
 
   .features button {
@@ -201,24 +216,16 @@
     object-fit: contain;
   }
 
-  .panel img {
+  .panel  {
     transition: opacity 0.5s ease-in-out;
     opacity: 0.2;
   }
 
-  article.panel.selected img {
+  article.panel.selected  {
     opacity: 1;
   }
 
-  .panel p {
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0.2;
-  }
-
-  article.panel.selected p {
-    opacity: 1;
-  }
-
+  
   @media (min-width: 1600px) {
     .container {
       font-size: 18px;

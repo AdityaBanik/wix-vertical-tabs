@@ -10,12 +10,18 @@
   let selected = 0;
   let observers = [];
   let isClicking = false;
-
+  let scrollable;
   function scrollIntoView(index) {
     isClicking = true;
-    sections[index].scrollIntoView({ behavior: "smooth", block: "start" });
-    selected = index;
-    setTimeout(() => (isClicking = false), 500);
+  const offsetTop = sections[index].offsetTop - 100 ;
+
+  scrollable.scrollTo({
+    top: offsetTop,
+    behavior: 'smooth' // You can also set this to 'auto' for immediate scrolling
+  });
+  selected = index;
+  setTimeout(() => (isClicking = false), 500);
+
   }
 
   onMount(() => {
@@ -56,7 +62,7 @@
         </button>
       {/each}
     </div>
-    <section class="scrollable">
+    <section class="scrollable" bind:this={scrollable}>
       {#each data as item, i}
         <article
           class="panel"
